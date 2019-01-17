@@ -1,0 +1,19 @@
+{
+  "name": "webpacknunjucksexample1",
+  "version": "1.0.0",
+  "description": "\u0016Example project to get Nunjucks working with Webpack the way I want",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CodingForFunAndProfit/WebpackNunjucksExample1.git"
+  },
+  "author": "FPS",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CodingForFunAndProfit/WebpackNunjucksExample1/issues"
+  },
+  "homepage": "https://github.com/CodingForFunAndProfit/WebpackNunjucksExample1#readme"
+}
