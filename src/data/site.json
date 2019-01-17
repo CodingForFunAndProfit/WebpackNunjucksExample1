@@ -1,0 +1,11 @@
+{ 
+	"foo": "test",
+	"pages": {
+		"index": {
+			"title": "MyTitle"
+		},
+		"contact": {
+			"title": "MySecondTitle"
+		}
+	}
+}

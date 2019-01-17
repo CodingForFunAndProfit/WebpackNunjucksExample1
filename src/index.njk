@@ -1,14 +1,7 @@
-<!DOCTYPE html>
-<html>
- 	<head>
-    	<meta charset="utf-8">
-    	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-    	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-      <title>{{ foo }}</title>
-  </head>
-	<body class="{{ body_class }}">
-    <p>{{ foo }}</p>
-      <main>
-      </main>
-	</body>
-</html>  
+{% set title = pages.index.title %}
+{% extends "_layout.njk" %}
+
+{% block content %}
+<h1>This is the headline for index.html</h1>
+<p>{{ foo }}</p>
+{% endblock %} 
