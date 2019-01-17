@@ -9,24 +9,11 @@ module.exports =  {
     	filename: 'bundle.js',
     	path: path.resolve(__dirname, 'dist')
   	},
-
-  	module: {
-    	rules: [
-    	{
-        	test: /\.html$/,
-        	use: [
-        	{
-            	loader: "html-loader",
-            	options: { minimize: true }
-          	}
-        	]
-		}
-    	]
-	},
-
+  	
   	plugins: [
     	new CleanWebpackPlugin(['dist']),
     	new HtmlWebpackPlugin({
+    		title: 'My App title',
       		filename: 'index.html',
       		template: 'src/index.html',
       		inject : "body"
