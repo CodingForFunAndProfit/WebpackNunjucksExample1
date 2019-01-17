@@ -15,9 +15,10 @@
 * webpack-dev-server
 * clean-webpack-plugin
 * html-webpack-plugin
+* html-loader
 * nunjucks
 
 
 ```bash
-npm install --save-dev webpack webpack-cli webpack-dev-server clean-webpack-plugin html-webpack-plugin nunjucks
+npm install --save-dev webpack webpack-cli webpack-dev-server clean-webpack-plugin html-webpack-plugin html-loader nunjucks
 ```

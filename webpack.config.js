@@ -2,26 +2,34 @@ var path = require('path');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
-module.exports = {
-  mode: 'development',
+module.exports =  {
+  	entry: './src/index.js',
 
-  devServer: {
-	hot: true
-  },
+  	output: {
+    	filename: 'bundle.js',
+    	path: path.resolve(__dirname, 'dist')
+  	},
 
-  entry: './src/index.js',
+  	module: {
+    	rules: [
+    	{
+        	test: /\.html$/,
+        	use: [
+        	{
+            	loader: "html-loader",
+            	options: { minimize: true }
+          	}
+        	]
+		}
+    	]
+	},
 
-  output: {
-    filename: 'bundle.js',
-    path: path.resolve(__dirname, 'dist')
-  },
-
-  plugins: [
-    new CleanWebpackPlugin(['dist']),
-    new HtmlWebpackPlugin({
-      filename: 'index.html',
-      template: 'src/index.html',
-      inject : "body"
-  	}),
-  ]
+  	plugins: [
+    	new CleanWebpackPlugin(['dist']),
+    	new HtmlWebpackPlugin({
+      		filename: 'index.html',
+      		template: 'src/index.html',
+      		inject : "body"
+  		}),
+  	]
 }
