@@ -32,7 +32,7 @@ module.exports =  {
 	},
 
   	plugins: [
-    	//new CleanWebpackPlugin(['dist']),
+    	new CleanWebpackPlugin(['dist']),
     	new HtmlWebpackPlugin({
     		templateParameters: { 'tPara': 'TestParam' }, //does not work
     		'customOptions': 'testCustomOptions', //does not work
