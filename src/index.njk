@@ -1,7 +1,11 @@
-{% set title = pages.index.title %}
+{% set var = pages.index %}
 {% extends "_layout.njk" %}
 
 {% block content %}
 <h1>This is the headline for index.html</h1>
 <p>{{ foo }}</p>
+<p><%= tPara %></p>
+<p><%= htmlWebpackPlugin.options.tPara %></p>
+<p><%= htmlWebpackPlugin.options.customOptions %></p>
+<p></p>
 {% endblock %} 

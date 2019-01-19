@@ -10,7 +10,10 @@ module.exports =  {
     	filename: 'bundle.js',
     	path: path.resolve(__dirname, 'dist')
   	},
-  	
+  	devServer: {
+  		contentBase: './src/',
+  		watchContentBase: true,
+  	},
   	module: {
     	rules: [
     	{
@@ -29,15 +32,21 @@ module.exports =  {
 	},
 
   	plugins: [
-    	new CleanWebpackPlugin(['dist']),
+    	//new CleanWebpackPlugin(['dist']),
     	new HtmlWebpackPlugin({
-    		title: 'My App title',
-      		filename: 'index.html',
-      		template: 'src/index.njk',
-      		inject : "body"
+    		templateParameters: { 'tPara': 'TestParam' }, //does not work
+    		'customOptions': 'testCustomOptions', //does not work
+    		title: 'HtmlWebpackPlugin title', //does not work
+    		minify: true, //does not work
+    		cache: true, //does not work?
+    		hash: false, //does work
+    		'meta': { 'theme-color': '#4285f4' }, //does work
+      		filename: 'index.html', //does work
+      		template: 'src/index.njk', //does work
+      		inject : "body" //does work
   		}),
   		new HtmlWebpackPlugin({
-    		title: 'My App title',
+    		title: 'HtmlWebpackPlugin title',
       		filename: 'contact.html',
       		template: 'src/contact.njk',
       		inject : "body"

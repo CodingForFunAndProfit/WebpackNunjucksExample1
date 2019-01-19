@@ -1,5 +1,6 @@
 { 
 	"foo": "test",
+	"globalVar2": "test2",
 	"pages": {
 		"index": {
 			"title": "MyTitle"
